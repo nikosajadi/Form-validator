@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Comfortaa&family=Kaushan+Script&family=League+Spartan:wght@400;700&family=Oswald&family=Sen&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -6,4 +8,21 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: Sen, sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c9cedc;
+}
+.container {
+  width: 480px;
+  height: 630px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  /* horizontal upset 0 becuse I want shadow will top to bottom- blur - overall size of the shadow */
+ box-shadow:0 5px 30px 10px rgba(0,0,0,0.4)  ;
 }
