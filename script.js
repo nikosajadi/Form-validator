@@ -1,29 +1,26 @@
 const form = document.getElementById('form');
-const password1EL = document.getElementById('password1');
-const password2EL = document.getElementById('password2');
-const messageContainer = document.getElementById('.message-container');
+const password1El = document.getElementById('password1');
+const password2El = document.getElementById('password2');
+const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message');
 
 
 // I am going to be to validate the form itself
-let isvalid = false;
+let isValid = false;
 
 function validateForm() {
-    //Using Contraint API to validate
-    isvalid = form.checkVisibility();
-    console.log(isvalid);
-    //Style main message for error messages
-    message.textContent = 'please fill out all fields.';
-    message.style.color = 'red';
-    messageContainer.style.borderColor = 'red';
+    // Use HTML constraint API to check form validity
+    isValid = form.checkValidity();
+      // Style main message for an error
+      message.textContent = 'Please fill out all fields.';
+      message.style.color = 'red';
+      messageContainer.style.borderColor = 'red';
 }
-
-
 function processFormData(e) {
     e.preventDefault();
-    console.log(e);
+    // Validate Form
+    validateForm();
 }
 
-
-//Event Listener 
-form.addEventListener('submit',processFormData);
+// Event Listener
+form.addEventListener('submit', processFormData);
