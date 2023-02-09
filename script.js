@@ -31,8 +31,8 @@ function validateForm() {
     messageContainer.style.borderColor = 'red';
     password1El.style.borderColor = 'red';
     password2El.style.borderColor = 'red';
-    
-}
+    }
+  }
   // If form is valid and passwords match
   if (isValid && passwordsMatch) {
     // Style main message for success
@@ -52,19 +52,16 @@ function validateForm() {
     // Do something with user data
     console.log(user);
   }
-}
-
-
-
+  
   function processFormData(e) {
     e.preventDefault();
     // Validate Form
     validateForm();
-  // Submit Data if valid
-  if (isValid && passwordsMatch) {
-    storeFormData();
+    // Submit Form if Valid
+    if (isValid && passwordsMatch) {
+      storeFormData();
+    }
   }
-}
 
 // Event Listener
 form.addEventListener('submit', processFormData);
