@@ -12,30 +12,30 @@
     <div class="container">
         <h1>sign Up Today!</h1>
         <!-- form -->
-        <form id="form" novalidate>
+        <form id="form">
             <!-- FullNAME -->
             <!-- requird: Specifies whether a form field need to be filled in before the form can be submitted -->
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Full Name"
+                <input type="text" id="name" placeholder="Full Name" name="name"
                  required minlength="3" maxlength="100">
             </div>
             <!-- Phone Number -->
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tell" id="phone" placeholder="555-555-555" 
+                <input type="tell" id="phone" placeholder="555-555-555" name="phone"
                 required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             </div>
             <!-- Email Address -->
                 <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="email@address.com" required>
+                <input type="email" id="email" placeholder="email@address.com" required name="email"
                 </div>
                 <!-- Website URL -->
                 <div class="form-group">
                 <label for="website">Website URL</label>
                 <input type="url" id="website" placeholder="https://github.com/nikosajadi"
-                required >
+                required name="Website">
                </div>
                 <!-- Password -->
                 <div class="form-group">
@@ -46,7 +46,7 @@
                 <!-- Confirm Pasword -->
                 <div class="form-group">
                     <label for="password2">Confrim Password</label>
-                    <input type="Password" id="password2" placeholder="Confirm Password2" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+                    <input type="Password" id="password2" placeholder="Confirm Password2" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
                 </div>
                <button type="submit">Register</button>
            </form>
